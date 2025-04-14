@@ -1,5 +1,4 @@
 import os
-import inspect
 import xarray as xr
 import plotly.graph_objects as go
 
