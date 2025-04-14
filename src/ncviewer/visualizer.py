@@ -7,21 +7,18 @@ class NcFile:
 
     def __init__(self, ncf_path):
         """
-        Load NetCDF file
-
-        - ncf_path: path to the NetCDF file
+        Load NetCDF file from given path
         """
-        stack = inspect.stack()
-        script_filename = stack[1].filename
-        current_path = os.path.dirname(os.path.abspath(script_filename))
-        
-        full_path = os.path.join(current_path, ncf_path)
-        
+        full_path = os.path.abspath(ncf_path)
+
         if not os.path.exists(full_path):
             raise FileNotFoundError(f"File {full_path} not found.")
         
-        self.data = xr.open_dataset(full_path)
-
+        try:
+            self.data = xr.open_dataset(full_path)
+        except Exception as e:
+            raise RuntimeError(f"Failed to load NetCDF file: {e}")
+        
         print(f"Loaded: {full_path}")
 
     ## 1D ##

@@ -1,7 +1,7 @@
 from ncviewer import NcFile
 
 
-ncf = NcFile("ncfiles/sim-advection-moc.nc")
+ncf = NcFile("examples/ncfiles/sim-advection-moc.nc")
 
 
 print(ncf.data)
