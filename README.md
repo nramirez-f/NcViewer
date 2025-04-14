@@ -16,5 +16,5 @@ pip install git+https://github.com/nramirez-f/NcViewer.git
 To upgrade use:
 
 ```bash
-pip install --upgrade --force-reinstall git+https://github.com/nramirez-f/NcViewer.git
+pip install --upgrade git+https://github.com/nramirez-f/NcViewer.git
 ```
