@@ -1,1 +1,1 @@
-from .visualizer import NcFile
+from .src import NcView
