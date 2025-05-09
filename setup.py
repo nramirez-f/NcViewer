@@ -1,16 +1,12 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name="ncviewer",
+    name="fdm",
     version="0.0",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
-    install_requires=[
-        "xarray",
-        "plotly",
-    ],
+    py_modules=["__init__", "src"],
+    install_requires=["numpy", "scipy", "ncfiles @ git+https://github.com/nramirez-f/NcFiles.git@main#egg=ncfiles"],
     author="Nramirez",
-    description="A NetCDF viewer using Plotly",
+    description="Module to visualize NetCDF files",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/nramirez-f/NcViewer",
