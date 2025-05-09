@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="fdm",
+    name="ncviewer",
     version="0.0",
     py_modules=["__init__", "src"],
     install_requires=["numpy", "scipy", "ncfiles @ git+https://github.com/nramirez-f/NcFiles.git@main#egg=ncfiles"],
