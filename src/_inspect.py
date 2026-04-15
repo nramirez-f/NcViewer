@@ -84,7 +84,7 @@ def list_dimensions(path):
         
         min_val = float(coord.min().values)
         max_val = float(coord.max().values)
-        print(f"  Range: [{min_val:.4f}, {max_val:.4f}]")
+        print(f"  Range: [{min_val:.{STAT_PRECISION}e}, {max_val:.{STAT_PRECISION}e}]")
         
     print(SEPARATOR_CHAR * SEPARATOR_LENGTH)
 
@@ -176,10 +176,10 @@ def summary(path, varname=None):
         print(f"  Type: {var.dtype}")
         # Try to compute statistics (skip if non-numeric)
         try:
-            print(f"  Min: {float(var.min().values):.{STAT_PRECISION}f}")
-            print(f"  Max: {float(var.max().values):.{STAT_PRECISION}f}")
-            print(f"  Mean: {float(var.mean().values):.{STAT_PRECISION}f}")
-            print(f"  Std: {float(var.std().values):.{STAT_PRECISION}f}")
+            print(f"  Min: {float(var.min().values):.{STAT_PRECISION}e}")
+            print(f"  Max: {float(var.max().values):.{STAT_PRECISION}e}")
+            print(f"  Mean: {float(var.mean().values):.{STAT_PRECISION}e}")
+            print(f"  Std: {float(var.std().values):.{STAT_PRECISION}e}")
         except (TypeError, ValueError):
             print("  (Non-numeric data, statistics not available)")
         # Print attributes if any (only for single variables, not expressions)

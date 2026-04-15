@@ -38,8 +38,8 @@ SUPPORTED_ERROR_NORMS = ['1', '2', 'inf']
 EXPRESSION_OPERATORS = ['+', '-', '*', '/', '**', '(', ')']
 
 # Statistical precision for display
-STAT_PRECISION = 4  # Number of decimal places
-ERROR_PRECISION = 6  # Number of decimal places for errors
+STAT_PRECISION = 3  # Number of decimal places for scientific notation
+ERROR_PRECISION = 3  # Number of decimal places for errors
 
 # File display limits
 MAX_VARIABLES_PREVIEW = 5  # Max variables to show in error messages
