@@ -26,7 +26,7 @@ def open_dataset(path):
     p = Path(path)
     if not p.exists():
         raise FileNotFoundError(f"File not found: {path}")
-    return xr.open_dataset(p)
+    return xr.open_dataset(p, decode_timedelta=True, decode_times=True)
 
 def count_unlimited_dimensions(path):
     """
